@@ -1,13 +1,15 @@
-<h1>🎉 Hey, we found a good deal! 🎁</h1>
+<h1>🎉 Hey, we found a great loan! 🎁</h1>
 <table border="1">
 
 {% for item in items %}
 <tr><td>
-    <p><strong>Product:</strong> {{item.title}}</p>
-    <p><strong>Price:</strong> {{item.price}}</p>
-    <p><strong>Store:</strong> {{item.retailer}}</p>
-    <p><strong>Price obtained at:</strong> {{item.when}}</p>
-    <p>Visit the product page at {{item.retailer}}: <a href="{{item.url}}">{{item.url}}</a></p>
+    <p><strong>Type:</strong> {{item.type}}</p>
+    <p><strong>Rating:</strong> {{item.rating}}</p>
+    <p><strong>Interest:</strong> {{item.interest}}%</p>
+    <p><strong>Net Return:</strong> {{item.return}}%</p>
+    <p><strong>Term:</strong> {{item.term}} months</p>
+    <p><strong>Outstanding:</strong> {{item.outstanding}}</p>
+    <p>Visit the page at: <a href="{{item.url}}">{{item.url}}</a></p>
 </td></tr>
 {% endfor %}
 </table>
